@@ -1,0 +1,16 @@
+<script setup lang="ts">
+import type { product } from '@/data/products';
+import ProductCard from './ProductCard.vue';
+import type { CartItem } from './CartSummary.vue';
+
+const props = defineProps<{ prods: product[] }>();
+const emit = defineEmits(['add-to-cart']);
+function handleAddToCart(item: CartItem) { emit('add-to-cart', item); }
+</script>
+
+<template>
+    <div class="m-auto flex flex-wrap gap-4 w-4/5 justify-center">
+        <ProductCard v-for="prod in prods" :key="prod.id" :prod="prod" 
+            @add-to-cart="handleAddToCart"/>
+    </div>
+</template>
