@@ -5,7 +5,6 @@ import FiltersBar from './components/FiltersBar.vue';
 import ProductList from './components/ProductList.vue';
 import { products, type product } from './data/products';
 import sortType from './data/sortType';
-import CategoryHandler from './utils/Utils';
 
 const cart = ref<CartItem[]>([]);
 
@@ -49,7 +48,7 @@ const filteredProducts = computed(() => {
 
 <template>
   <FiltersBar 
-    @catChange="c => CategoryHandler(selectedCategories, c)"
+    @catChange="cs => selectedCategories = cs"
     @sortChange="s => selectedSort = s"
     @termChange="t => searchedTerm = t"
   />
