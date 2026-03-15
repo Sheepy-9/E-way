@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 import CartSummary, { type CartItem } from './components/CartSummary.vue';
 import FiltersBar from './components/FiltersBar.vue';
 import ProductList from './components/ProductList.vue';
-import { products, type product } from './data/products';
+import { products, type Product } from './data/products';
 import sortType from './data/sortType';
 
 const cart = ref<CartItem[]>([]);
@@ -20,7 +20,7 @@ const searchedTerm = ref('');
 
 
 const filteredProducts = computed(() => {
-  let filtered: product[] = products.slice();
+  let filtered: Product[] = products.slice();
   if (selectedCategories.value.length) { 
     filtered = filtered.filter(p => selectedCategories.value.includes(p.category))
   }
@@ -52,6 +52,6 @@ const filteredProducts = computed(() => {
     @sortChange="s => selectedSort = s"
     @termChange="t => searchedTerm = t"
   />
-  <ProductList :prods="filteredProducts" @add-to-cart="addToCart"/>
+  <ProductList :prods="filteredProducts" @AddToCart="addToCart"/>
   <CartSummary :cart="cart"/>
 </template>

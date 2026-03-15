@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { product } from '@/data/products';
+import type { Product } from '@/data/products';
 import { computed } from 'vue';
 
 export type CartItem = {
-  product: product,
+  product: Product,
   quantity: number
 }
 

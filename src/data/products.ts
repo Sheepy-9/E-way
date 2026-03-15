@@ -1,4 +1,4 @@
-export interface product {
+export interface Product {
     id: number;
     name: string;
     price: number;
@@ -22,7 +22,7 @@ function getCategory(name: string) {
     return categories.find(cat => cat === name) ?? "Unknown";
 }
 
-export const products: product[] = [
+export const products: Product[] = [
     { id: 1, name: "Organic Apples", price: 2.99, category: getCategory("Fruits"), inStock: true, rating: 4, image: "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/500/77ad23a7-45bc-4268-81a4-0176569fe4f3/Royal%20Gala%20Apples%201kg" },
     { id: 2, name: "Whole Wheat Bread", price: 1.99, category: getCategory("Bakery"), inStock: true, rating: 5, image: "https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_a174e682-309d-4ae6-bee5-dd5d9e21a593.jpg" },
     { id: 3, name: "Almond Milk", price: 3.49, category: getCategory("Dairy Alternatives"), inStock: false, rating: 4, image: "https://dm.emea.cms.aldi.cx/is/image/aldiprodeu/product/jpg/scaleWidth/500/f91f11c0-db27-4dfd-9fb7-70ea9d3409d8/UHT%20Unsweetened%20Almond%20Drink" },

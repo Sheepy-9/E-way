@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { product } from '@/data/products';
+import type { Product } from '@/data/products';
 import type { CartItem } from './CartSummary.vue';
-const props = defineProps<{ prod: product }>();
-const emit = defineEmits<{(e: 'add-to-cart', prod: CartItem): void}>();
-function addToCart() { emit('add-to-cart', { product: props.prod, quantity: 1 }); }
+const props = defineProps<{ prod: Product }>();
+const emit = defineEmits<(e: 'AddToCart', prod: CartItem)>();
+function addToCart() { emit('AddToCart', { product: props.prod, quantity: 1 }); }
 </script>
 
 <template>
