@@ -4,7 +4,7 @@ export interface product {
     price: number;
     category: string;
     inStock: boolean;
-    rating: number; // 1 to 5
+    rating: 1 | 2 | 3 | 4 | 5;
     image: string;
 }
 
