@@ -2,7 +2,7 @@
 import type { Product } from '@/data/products';
 import type { CartItem } from './CartSummary.vue';
 const props = defineProps<{ prod: Product }>();
-const emit = defineEmits<(e: 'AddToCart', prod: CartItem)>();
+const emit = defineEmits<{(e: 'AddToCart', prod: CartItem): void}>();
 function addToCart() { emit('AddToCart', { product: props.prod, quantity: 1 }); }
 </script>
 
