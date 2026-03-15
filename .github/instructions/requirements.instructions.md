@@ -104,3 +104,15 @@ Use:
  - $emit to communicate from child to parent
 
 Styling can be simple; focus is on clear structure and correct Vue usage.
+
+## What to Submit
+
+Link to a Git repository (GitHub, GitLab, etc.) with:
+
+- Source code
+
+- README.md containing:
+
+  - Project specific information (e.g. name, versions, small introduction)
+
+  - Instructions to run the project (e.g. npm install, npm run dev)
